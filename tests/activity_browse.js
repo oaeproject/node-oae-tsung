@@ -24,6 +24,7 @@ var Search = require('../lib/api/search');
 var User = require('../lib/api/user');
 
 var ActivityMacros = require('./macros/activity');
+var BrowseMacros = require('./macros/browse');
 var LoginMacros = require('./macros/login');
 
 /**
@@ -43,6 +44,9 @@ module.exports.test = function(runner, probability) {
 
 	// Someone had commented on this user's content item. Go read a bit, but we won't reply
 	ActivityMacros.checkContentComment(session, '%%_public_content_1%%');
+
+	// Browse one of the user's profiles
+	BrowseMacros.userProfile(session, '%%_public_users_0%%', 2, 1, 1, 1, 1);
 
 	// Open notifications again and visit a group that the user was recently added to
 	Container.notifications(session);
@@ -85,6 +89,9 @@ module.exports.test = function(runner, probability) {
 
 	// Content item shared with me
 	ActivityMacros.checkSharedContent(session, '%%_public_content_5%%');
+
+	// Browse one of the user's profiles who shared it with me
+	BrowseMacros.userProfile(session, '%%_public_users_1%%', 1, 1, 1, 1, 1);
 
 	// Back to my activity page
 	Container.home(session);

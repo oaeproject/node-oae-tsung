@@ -17,7 +17,6 @@ var Container = require('../../lib/api/container');
 var Explore = require('../../lib/api/explore');
 var User = require('../../lib/api/user');
 
-
 /**
  * Utility method that simulates a user visiting the site, logging in. This does not take care of redirecting
  * the user to any target page
