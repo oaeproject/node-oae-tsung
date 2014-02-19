@@ -24,6 +24,7 @@ var Search = require('../lib/api/search');
 var User = require('../lib/api/user');
 
 var ActivityMacros = require('./macros/activity');
+var BrowseMacros = require('./macros/browse');
 var LoginMacros = require('./macros/login');
 
 /**
@@ -40,6 +41,10 @@ module.exports.test = function(runner, probability) {
 	
 	// Have a look at my activities and notifications
 	ActivityMacros.browse(session, true, 5, 3);
+
+	// Look at a couple users that I will be collaborating with
+	BrowseMacros.userProfile(session, '%%_public_users_2%%', 1, 1, 1, 1, 2);
+	BrowseMacros.userProfile(session, '%%_public_users_3%%', 3, 2, 1, 1, 1);
 
 	// 2. I continue to create the group I came to create. It takes a little while to type in the information
 
