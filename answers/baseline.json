@@ -6,7 +6,7 @@
     "phases": [
         {
             "durationUnit": "minute",
-            "duration": 10,
+            "duration": 60,
             "arrivalUnit": "second",
             "arrival": 3.1
         }
