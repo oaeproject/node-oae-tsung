@@ -3,6 +3,7 @@
     "clients": ["localhost"],
     "servers": ["oae.oae-performance.oaeproject.org"],
     "dumpTraffic": false,
+    "pushEnabled": true,
     "phases": [
         {
             "durationUnit": "minute",

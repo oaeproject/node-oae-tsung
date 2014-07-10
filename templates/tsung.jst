@@ -141,7 +141,7 @@
       </transaction>
 
 
-        <% if (action.push) { %>
+        <% if (pushEnabled !== false && action.push) { %>
           <!-- If we need to setup a websocket in this action we do it outside of the tsung transaction -->
 
           <!-- We need to change the session type to websocket -->

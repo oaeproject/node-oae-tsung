@@ -94,6 +94,7 @@ if (argv.a) {
 var config = {
     'dtdLocation': argv.d || answers.dtdLocation,
     'logLevel': answers.logLevel || 'notice',
+    'pushEnabled': answers.pushEnabled,
     'version': '1.0',
     'dumpTraffic': answers.dumpTraffic,
     'monitoring': answers.monitoring
