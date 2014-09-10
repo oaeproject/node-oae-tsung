@@ -6,7 +6,7 @@
         "colors": "latest",
         "mkdirp": "latest",
         "optimist": "latest",
-        "underscore": "latest",
+        "underscore": "1.6.0",
         "wrench": "1.4.1"
     },
     "bin": {
